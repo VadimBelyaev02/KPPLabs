@@ -3,6 +3,7 @@ package com.vadim.exceptionhandler;
 import com.vadim.exception.AlreadyExistsException;
 import com.vadim.exception.CalculatingException;
 import com.vadim.exception.NotFoundException;
+import com.vadim.exception.NotValidException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -36,4 +37,11 @@ public class ResponseEntityExceptionHandler {
         ExceptionInfo info = new ExceptionInfo(e.getMessage(), HttpStatus.NOT_FOUND.value());
         return new ResponseEntity<>(info, HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler(NotValidException.class)
+    public ResponseEntity<?> handleNotValidatedException(NotValidException e) {
+        ExceptionInfo info = new ExceptionInfo(e.getMessage(), HttpStatus.BAD_REQUEST.value());
+        return new ResponseEntity<>(info, HttpStatus.BAD_REQUEST);
+    }
+
 }

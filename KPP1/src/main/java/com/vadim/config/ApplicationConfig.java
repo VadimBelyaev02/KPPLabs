@@ -11,14 +11,4 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @ComponentScan(basePackages = "com.vadim")
 public class ApplicationConfig {
 
-    @Bean
-    public MethodValidationPostProcessor methodValidationPostProcessor() {
-        return new MethodValidationPostProcessor();
-    }
 }
-
-/*
-1. Добавить простейший кэш в виде in-memory Map для сервиса. Map должна содержаться в отдельном бине/классе
-, который должен добавляться в основной сервис с помощью dependency injection механизм Spring
-
- */

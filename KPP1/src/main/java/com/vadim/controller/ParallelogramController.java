@@ -48,7 +48,10 @@ public class ParallelogramController {
 
     @PutMapping
     @ResponseStatus(HttpStatus.OK)
-    public ParallelogramDto putParallelogram(@RequestBody ParallelogramDto parallelogramDto) {
+    public ParallelogramDto putParallelogram(@Valid @RequestBody ParallelogramDto parallelogramDto, BindingResult result) {
+        if (result.hasErrors()) {
+            throw new NotValidException(result.getAllErrors().toString());
+        }
         return service.update(parallelogramDto);
     }
 
@@ -57,7 +60,7 @@ public class ParallelogramController {
     @ResponseStatus(HttpStatus.CREATED)
     public ParallelogramDto postParallelogram(@Valid @RequestBody ParallelogramDto parallelogramDto, BindingResult result) {
         if (result.hasErrors()) {
-            throw new NotValidException("dfg");
+            throw new NotValidException(result.getAllErrors().toString());
         }
         return service.save(parallelogramDto);
     }
