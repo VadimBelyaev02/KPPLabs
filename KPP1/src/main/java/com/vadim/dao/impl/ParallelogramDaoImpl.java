@@ -5,7 +5,6 @@ import com.vadim.model.Parallelogram;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Repository
 public class ParallelogramDaoImpl implements ParallelogramDao {
