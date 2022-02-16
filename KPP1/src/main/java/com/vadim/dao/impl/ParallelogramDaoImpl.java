@@ -4,19 +4,25 @@ import com.vadim.dao.ParallelogramDao;
 import com.vadim.model.Parallelogram;
 import org.springframework.stereotype.Repository;
 
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Repository
 public class ParallelogramDaoImpl implements ParallelogramDao {
 
-    private Map<Long, Parallelogram> parallelograms;
+    private final Map<Long, Parallelogram> parallelograms;
 
-    public Parallelogram save(Parallelogram parallelogram) {
-        return parallelograms.put(parallelogram.getId(), parallelogram);
+    public ParallelogramDaoImpl() {
+         this.parallelograms = new HashMap<>();
     }
 
+    @Override
+    public Parallelogram save(Parallelogram parallelogram) {
+        parallelograms.put(parallelogram.getId(), parallelogram);
+        return parallelogram;
+    }
+
+    @Override
     public Optional<Parallelogram> findById(Long id) {
         Parallelogram parallelogram = parallelograms.get(id);
         if (Objects.isNull(parallelogram)) {
@@ -25,7 +31,18 @@ public class ParallelogramDaoImpl implements ParallelogramDao {
         return Optional.of(parallelogram);
     }
 
+    @Override
     public boolean existsById(Long id) {
         return parallelograms.containsKey(id);
+    }
+
+    @Override
+    public List<Parallelogram> findAll() {
+        return new ArrayList<>(parallelograms.values());
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        parallelograms.remove(id);
     }
 }
