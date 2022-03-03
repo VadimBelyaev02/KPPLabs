@@ -1,5 +1,6 @@
 package com.vadim.service.impl;
 
+import com.vadim.dto.ParallelogramDto;
 import com.vadim.service.ParallelogramService;
 import org.springframework.stereotype.Service;
 
@@ -7,12 +8,8 @@ import org.springframework.stereotype.Service;
 public class ParallelogramServiceImpl implements ParallelogramService {
 
     @Override
-    public Double calculateSquare(Double width, Double height) {
-        return width * height;
+    public ParallelogramDto getParallelogram(Double width, Double height) {
+        return new ParallelogramDto(width, height);
     }
 
-    @Override
-    public Double calculatePerimeter(Double width, Double height) {
-        return 2 * (width + height);
-    }
 }

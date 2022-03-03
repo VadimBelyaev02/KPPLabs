@@ -1,8 +1,8 @@
 package com.vadim.service;
 
+import com.vadim.dto.ParallelogramDto;
+
 public interface ParallelogramService {
 
-    Double calculateSquare(Double width, Double height);
-
-    Double calculatePerimeter(Double width, Double height);
+    ParallelogramDto getParallelogram(Double width, Double height);
 }
