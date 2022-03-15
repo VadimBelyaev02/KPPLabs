@@ -2,6 +2,7 @@ package com.vadim.controller;
 
 import com.vadim.dto.ParallelogramDto;
 import com.vadim.service.ParallelogramService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +13,8 @@ import org.springframework.web.bind.annotation.*;
 @Validated
 public class ParallelogramController {
 
-    private final ParallelogramService service;
-
-    public ParallelogramController(ParallelogramService service) {
-        this.service = service;
-    }
+    @Autowired
+    private ParallelogramService service;
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
