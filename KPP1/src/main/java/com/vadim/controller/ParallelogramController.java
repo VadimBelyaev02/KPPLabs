@@ -28,6 +28,7 @@ public class ParallelogramController {
     public ParallelogramDto getParallelogram(@RequestParam("width") @Min(1) Double width,
                                              @RequestParam("height") @Min(1) Double height) {
         logger.info("Class: ParallelogramController; Method: getParallelogram; Params: (width=" + width + ", height=" + height + ")");
-        return service.getParallelogram(width, height);
+        return new ParallelogramDto();
+        //return service.getParallelogram(width, height);
     }
 }
