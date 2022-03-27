@@ -7,10 +7,6 @@ public class ParallelogramDto {
     private Double width;
     private Double height;
 
-    public ParallelogramDto() {
-
-    }
-
     public ParallelogramDto(Double width, Double height) {
         this.width = width;
         this.height = height;
