@@ -1,32 +1,18 @@
-package com.vadim.dto;
+package com.vadim.model;
 
-import javax.validation.constraints.NotNull;
+public class Parallelogram {
 
-public class ParallelogramDto {
-
-    @NotNull
     private Long id;
-
-    @NotNull
     private Double width;
-
-    @NotNull
     private Double height;
 
-    public ParallelogramDto() {
-    }
+    public Parallelogram() {
 
-    public ParallelogramDto(Long id, Double width, Double height) {
+    }
+    public Parallelogram(Long id, Double width, Double height) {
         this.id = id;
-    }
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+        this.width = width;
+        this.height = height;
     }
 
     public Double getWidth() {
@@ -45,11 +31,19 @@ public class ParallelogramDto {
         this.height = height;
     }
 
+    public Double getSquare() {
+        return width * height;
+    }
+
     public Double getPerimeter() {
         return 2 * (width + height);
     }
 
-    public Double getSquare() {
-        return width * height;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
