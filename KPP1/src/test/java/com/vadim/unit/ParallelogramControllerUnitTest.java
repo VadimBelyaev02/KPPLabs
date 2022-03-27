@@ -30,9 +30,6 @@ public class ParallelogramControllerUnitTest {
 
     private final String ENDPOINT = "/api/parallelogram";
 
-//    @Autowired
-//    private ParallelogramController controller;
-
     @Autowired
     private WebApplicationContext applicationContext;
 
