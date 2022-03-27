@@ -7,16 +7,14 @@ import org.springframework.validation.beanvalidation.MethodValidationPostProcess
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @EnableWebMvc
-@Configuration
 @ComponentScan(basePackages = "com.vadim")
+@Configuration
 public class ApplicationConfig {
-
-
     /*
-5.	Functional programming with Java 8
-1. Преобразовать исходный сервис для работы со списком параметров для bulk операций используя Java 8 лямбда выражения.
-2. Добавить POST метод для вызова bulk операции и передачи списка параметров в виде JSON
-
+6.	Functional filtering and mapping
+1. Добавить аггрегирующий функционал (подсчёт макс, мин, средних значений)
+для входных параметров и результатов с использованием Java 8 map/filters функций.
+Расширить результат POST соотвественно.
 
      */
 }

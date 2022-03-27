@@ -63,5 +63,4 @@ public class ParallelogramServiceImpl implements ParallelogramService {
         }
         parallelogramDao.deleteById(id);
     }
-
 }

@@ -1,6 +1,7 @@
 package com.vadim.controller;
 
 import com.vadim.dto.ParallelogramDto;
+
 import com.vadim.exception.NotValidException;
 import com.vadim.service.CountingService;
 import com.vadim.service.ParallelogramService;
@@ -70,7 +71,6 @@ public class ParallelogramController {
         countingService.increment();
         return service.update(parallelogramDto);
     }
-
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

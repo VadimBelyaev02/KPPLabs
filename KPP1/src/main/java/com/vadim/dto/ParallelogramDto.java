@@ -1,8 +1,6 @@
 package com.vadim.dto;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Null;
-import java.util.Comparator;
 
 public class ParallelogramDto {
 
@@ -16,14 +14,12 @@ public class ParallelogramDto {
     private Double height;
 
     public ParallelogramDto() {
-
     }
 
     public ParallelogramDto(Long id, Double width, Double height) {
         this.id = id;
-        this.width = width;
-        this.height = height;
     }
+
 
     public Long getId() {
         return id;
