@@ -22,18 +22,6 @@ public class ParallelogramController {
         this.service = service;
     }
 
-    @GetMapping("/{id}/square")
-    @ResponseStatus(HttpStatus.OK)
-    public Double getSquare(@PathVariable("id") Long id) {
-        return service.getParallelogram(id).getSquare();
-    }
-
-    @GetMapping("/{id}/perimeter")
-    @ResponseStatus(HttpStatus.OK)
-    public Double getPerimeter(@PathVariable("id") Long id) {
-        return service.getParallelogram(id).getPerimeter();
-    }
-
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ParallelogramDto getParallelogram(@PathVariable("id") Long id) {
