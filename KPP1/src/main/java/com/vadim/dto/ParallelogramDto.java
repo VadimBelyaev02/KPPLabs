@@ -16,14 +16,10 @@ public class ParallelogramDto {
     private Double height;
 
     public ParallelogramDto() {
-
     }
 
     public ParallelogramDto(Long id, Double width, Double height) {
         this.id = id;
-        this.width = width;
-        this.height = height;
-    }
 
     public Long getId() {
         return id;
@@ -48,7 +44,7 @@ public class ParallelogramDto {
     public void setHeight(Double height) {
         this.height = height;
     }
-
+      
     public Double getPerimeter() {
         return 2 * (width + height);
     }

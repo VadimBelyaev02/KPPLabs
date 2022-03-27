@@ -7,11 +7,9 @@ import org.springframework.validation.beanvalidation.MethodValidationPostProcess
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @EnableWebMvc
-@Configuration
 @ComponentScan(basePackages = "com.vadim")
+@Configuration
 public class ApplicationConfig {
-
-
     /*
 6.	Functional filtering and mapping
 1. Добавить аггрегирующий функционал (подсчёт макс, мин, средних значений)

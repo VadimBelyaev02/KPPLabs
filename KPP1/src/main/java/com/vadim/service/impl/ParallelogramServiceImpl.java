@@ -62,6 +62,5 @@ public class ParallelogramServiceImpl implements ParallelogramService {
             throw new NotFoundException("Parallelogram with id = " + id + " is not found");
         }
         parallelogramDao.deleteById(id);
-    }
 
 }
