@@ -1,7 +1,6 @@
 package com.vadim.dto;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Null;
 
 public class ParallelogramDto {
 
