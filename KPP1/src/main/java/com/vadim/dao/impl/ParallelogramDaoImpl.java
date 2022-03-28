@@ -13,7 +13,7 @@ public class ParallelogramDaoImpl implements ParallelogramDao {
     private final Map<Long, Parallelogram> parallelograms;
 
     public ParallelogramDaoImpl() {
-         this.parallelograms = new HashMap<>();
+         this.parallelograms = new LinkedHashMap<>();
     }
 
     @Override
