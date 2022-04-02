@@ -8,11 +8,7 @@ public class CountingServiceImpl implements CountingService {
 
     private long numberOfRequests;
 
-    //
-    //
-    //
-
-    public void increment() {
+    public synchronized void increment() {
         this.numberOfRequests++;
     }
 
